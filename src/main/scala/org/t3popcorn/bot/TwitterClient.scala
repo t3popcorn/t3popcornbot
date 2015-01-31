@@ -11,9 +11,5 @@ object SearchStreamer {
     twitterStream.addListener(Util.simpleStatusListener)
     twitterStream.filter(new FilterQuery().track(searchTerms))
     println(twitterStream)
-
-    //Thread.sleep(10000)
-    //twitterStream.cleanUp
-    //twitterStream.shutdown
   }
 }

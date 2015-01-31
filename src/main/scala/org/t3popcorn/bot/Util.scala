@@ -17,7 +17,8 @@ object Util extends TwitterInstance {
         val statusAuthor = status.getUser.getScreenName
         twitter.createFavorite(status.getId)
         val text = "@" + statusAuthor + " " + reply
-        new StatusUpdate(text).inReplyToStatusId(status.getId)
+        val update = new StatusUpdate(text).inReplyToStatusId(status.getId)
+        twitter.updateStatus(update)
       }
     }
 

@@ -18,7 +18,7 @@ trait TwitterInstance {
  */
 object ReplyOK extends TwitterInstance {
 
-  def main(args: Array[String]) {
+  def reply(args: Array[String]) {
     val num = if (args.length == 1) args(0).toInt else 10
     val userName = twitter.getScreenName
     val statuses = twitter.getMentionsTimeline.take(num)
