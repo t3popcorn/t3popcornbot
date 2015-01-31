@@ -11,7 +11,7 @@ trait TwitterInstance {
   val cb = new ConfigurationBuilder()
   cb.setDebugEnabled(true)
     .setOAuthConsumerKey(sys.env("consumerKey"))
-    .setOAuthConsumerSecret(sys.env("ConsumerSecret"))
+    .setOAuthConsumerSecret(sys.env("consumerSecret"))
     .setOAuthAccessToken(sys.env("accessToken"))
     .setOAuthAccessTokenSecret(sys.env("accessTokenSecret"))
   val twitter = new TwitterFactory(cb.build()).getInstance()
