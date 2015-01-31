@@ -1,13 +1,22 @@
 package org.t3popcorn.bot
 
 import twitter4j._
+import twitter4j.conf.ConfigurationBuilder
 import collection.JavaConversions._
 
 /**
  * Gets a Twitter instance set up and ready to use.
  */
 trait TwitterInstance {
-  val twitter = new TwitterFactory().getInstance
+  val cb = new ConfigurationBuilder()
+  cb.setDebugEnabled(true)
+    .setOAuthConsumerKey(sys.env("consumerKey"))
+    .setOAuthConsumerSecret(sys.env("ConsumerSecret"))
+    .setOAuthAccessToken(sys.env("accessToken"))
+    .setOAuthAccessTokenSecret(sys.env("accessTokenSecret"))
+  val tf = new TwitterFactory(cb.build())
+
+  val twitter = tf.getInstance()
 }
 
 /**
@@ -26,11 +35,12 @@ object ReplyOK extends TwitterInstance {
       val statusAuthor = status.getUser.getScreenName
       val mentionedEntities = status.getUserMentionEntities.map(_.getScreenName).toList
       val participants = (statusAuthor :: mentionedEntities).toSet - userName
-      val text = participants.map(p=>"@"+p).mkString(" ") + " OK."
+      val text = participants.map(p => "@" + p).mkString(" ") + " OK."
       val reply = new StatusUpdate(text).inReplyToStatusId(status.getId)
       println("Replying: " + text)
       twitter.updateStatus(reply)
-    }}
+    }
+                     }
 
   }
 
@@ -61,8 +71,8 @@ trait RateChecker {
       println("*** You hit your rate limit. ***")
       val waitTime = rateLimitStatus.getSecondsUntilReset + 10
       println("Waiting " + waitTime + " seconds ( "
-	      + waitTime/60.0 + " minutes) for rate limit reset.")
-      Thread.sleep(waitTime*1000)
+              + waitTime / 60.0 + " minutes) for rate limit reset.")
+      Thread.sleep(waitTime * 1000)
     }
   }
 
