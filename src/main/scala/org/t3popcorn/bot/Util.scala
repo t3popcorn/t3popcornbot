@@ -4,7 +4,6 @@ import twitter4j._
 
 import scala.util.Random
 import scala.io.Source
-import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 object Util extends TwitterInstance {
@@ -15,7 +14,7 @@ object Util extends TwitterInstance {
 
         logger.info(status.getText)
         val statusAuthor = status.getUser.getScreenName
-        twitter.createFavorite(status.getId)
+
         val text = "@" + statusAuthor + " " + reply
         val update = new StatusUpdate(text).inReplyToStatusId(status.getId)
         twitter.updateStatus(update)
