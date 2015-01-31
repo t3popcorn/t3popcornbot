@@ -38,7 +38,7 @@ object ReplyOK extends TwitterInstance {
       val participants = (statusAuthor :: mentionedEntities).toSet - userName
       val text = participants.map(p => "@" + p).mkString(" ") + " OK."
       val reply = new StatusUpdate(text).inReplyToStatusId(status.getId)
-      println("Replying: " + text)
+      Util.logger.info("Replying " + text)
       twitter.updateStatus(reply)
     }
                      }
@@ -66,12 +66,12 @@ trait RateChecker {
    */
   def checkAndWait(response: TwitterResponse, verbose: Boolean = false) {
     val rateLimitStatus = response.getRateLimitStatus
-    if (verbose) println("RLS: " + rateLimitStatus)
+    if (verbose) Util.logger.info("RLS: " + rateLimitStatus)
 
     if (rateLimitStatus != null && rateLimitStatus.getRemaining == 0) {
-      println("*** You hit your rate limit. ***")
+      Util.logger.error("*** You hit your rate limit. ***")
       val waitTime = rateLimitStatus.getSecondsUntilReset + 10
-      println("Waiting " + waitTime + " seconds ( "
+      Util.logger.info("Waiting " + waitTime + " seconds ( "
               + waitTime / 60.0 + " minutes) for rate limit reset.")
       Thread.sleep(waitTime * 1000)
     }

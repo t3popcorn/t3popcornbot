@@ -4,6 +4,8 @@ import twitter4j._
 
 import scala.util.Random
 import scala.io.Source
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 object Util extends TwitterInstance {
   def simpleStatusListener = new StatusListener() {
@@ -11,7 +13,7 @@ object Util extends TwitterInstance {
       if (!status.isRetweet) {
         val reply = Random.shuffle(Util.replies).head
 
-        println(status.getText)
+        logger.info(status.getText)
         val statusAuthor = status.getUser.getScreenName
         twitter.createFavorite(status.getId)
         val text = "@" + statusAuthor + " " + reply
@@ -37,5 +39,7 @@ object Util extends TwitterInstance {
   def replies = Source.fromFile("src/main/resources/replies").getLines().toList
 
   def searchTerms = Source.fromFile("src/main/resources/searchTerms").getLines().toArray
+
+  def logger = LoggerFactory.getLogger("t3popcorn")
 
 }

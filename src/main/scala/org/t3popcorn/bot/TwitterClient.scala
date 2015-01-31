@@ -10,6 +10,5 @@ object SearchStreamer extends AuthConfiguration{
 
     twitterStream.addListener(Util.simpleStatusListener)
     twitterStream.filter(new FilterQuery().track(Util.searchTerms))
-    println(twitterStream)
   }
 }
