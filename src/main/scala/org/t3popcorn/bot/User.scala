@@ -2,7 +2,6 @@ package org.t3popcorn.bot
 
 import twitter4j._
 import twitter4j.conf.ConfigurationBuilder
-import collection.JavaConversions._
 
 /**
  * Gets a Twitter instance set up and ready to use.
@@ -18,33 +17,6 @@ trait AuthConfiguration {
     .setOAuthConsumerSecret(sys.env("consumerSecret"))
     .setOAuthAccessToken(sys.env("accessToken"))
     .setOAuthAccessTokenSecret(sys.env("accessTokenSecret"))
-}
-
-/**
- * Go through the N most recent tweets that have mentioned
- * the authenticating user, and reply "OK." to them (ensuring
- * to include the author of the original tweet and any other
- * entities mentioned in it).
- */
-object ReplyOK extends TwitterInstance {
-
-  def reply(args: Array[String]) {
-    val num = if (args.length == 1) args(0).toInt else 10
-    val userName = twitter.getScreenName
-    val statuses = twitter.getMentionsTimeline.take(num)
-    statuses.foreach { status => {
-      val statusAuthor = status.getUser.getScreenName
-      val mentionedEntities = status.getUserMentionEntities.map(_.getScreenName).toList
-      val participants = (statusAuthor :: mentionedEntities).toSet - userName
-      val text = participants.map(p => "@" + p).mkString(" ") + " OK."
-      val reply = new StatusUpdate(text).inReplyToStatusId(status.getId)
-      Util.logger.info("Replying " + text)
-      twitter.updateStatus(reply)
-    }
-                     }
-
-  }
-
 }
 
 /**
