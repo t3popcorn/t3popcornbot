@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/t3popcornbot
+worker: target/universal/stage/bin/t3popcornbot
