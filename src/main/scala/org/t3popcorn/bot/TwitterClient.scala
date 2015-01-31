@@ -6,7 +6,7 @@ import twitter4j.conf.ConfigurationBuilder
 object SearchStreamer {
   def main(args: Array[String]) {
 
-    val searchTerms = Array("t3popcorn", "typo3")
+    val searchTerms = Array("t3popcorn", "typo3", "#TYPO3")
 
     val cb = new ConfigurationBuilder()
     cb.setDebugEnabled(true)
