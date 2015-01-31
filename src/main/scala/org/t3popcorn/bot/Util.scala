@@ -11,7 +11,7 @@ object Util extends TwitterInstance {
   def simpleStatusListener = new StatusListener() {
 
     def onStatus(status: Status) {
-      if (!status.isRetweet && !blackListedUsers.contains(status.getUser)) {
+      if (!status.isRetweet && !blackListedUsers.contains(status.getUser.getScreenName)) {
         val reply = Random.shuffle(Util.replies).head
 
         logger.info(status.getText)
