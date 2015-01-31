@@ -7,14 +7,17 @@ import collection.JavaConversions._
 /**
  * Gets a Twitter instance set up and ready to use.
  */
-trait TwitterInstance {
+trait TwitterInstance extends AuthConfiguration {
+  val twitter = new TwitterFactory(cb.build()).getInstance()
+}
+
+trait AuthConfiguration {
   val cb = new ConfigurationBuilder()
   cb.setDebugEnabled(true)
     .setOAuthConsumerKey(sys.env("consumerKey"))
     .setOAuthConsumerSecret(sys.env("consumerSecret"))
     .setOAuthAccessToken(sys.env("accessToken"))
     .setOAuthAccessTokenSecret(sys.env("accessTokenSecret"))
-  val twitter = new TwitterFactory(cb.build()).getInstance()
 }
 
 /**
