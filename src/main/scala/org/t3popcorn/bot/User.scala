@@ -14,9 +14,7 @@ trait TwitterInstance {
     .setOAuthConsumerSecret(sys.env("ConsumerSecret"))
     .setOAuthAccessToken(sys.env("accessToken"))
     .setOAuthAccessTokenSecret(sys.env("accessTokenSecret"))
-  val tf = new TwitterFactory(cb.build())
-
-  val twitter = tf.getInstance()
+  val twitter = new TwitterFactory(cb.build()).getInstance()
 }
 
 /**
