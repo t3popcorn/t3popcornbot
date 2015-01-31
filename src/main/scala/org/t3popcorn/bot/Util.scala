@@ -34,7 +34,7 @@ object Util extends TwitterInstance {
     def onTrackLimitationNotice(numberOfLimitedStatuses: Int) {}
 
     def onException(ex: Exception) {
-      ex.printStackTrace
+      ex.printStackTrace()
     }
 
     def onScrubGeo(arg0: Long, arg1: Long) {}
@@ -45,7 +45,7 @@ object Util extends TwitterInstance {
 
   def replies = Source.fromFile("src/main/resources/replies").getLines().toList
 
-  def blackListedUsers = Source.fromFile("src/main/resources/usersBlackList").getLines.toList
+  def blackListedUsers = Source.fromFile("src/main/resources/userBlackList").getLines().toList
 
   def searchTerms = Source.fromFile("src/main/resources/searchTerms").getLines().toArray
 
