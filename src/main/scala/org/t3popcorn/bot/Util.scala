@@ -20,6 +20,10 @@ object Util extends TwitterInstance {
         val update = new StatusUpdate(text).inReplyToStatusId(status.getId)
         twitter.updateStatus(update)
       }
+      if (status.getText.contains("t3popcorn")) {
+        twitter.createFavorite(status.getId)
+        twitter.retweetStatus(status.getId)
+      }
     }
 
     def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
