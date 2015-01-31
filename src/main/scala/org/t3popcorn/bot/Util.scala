@@ -1,7 +1,5 @@
 package org.t3popcorn.bot
 
-import java.io.InputStream
-
 import twitter4j._
 
 import scala.util.Random
@@ -37,5 +35,7 @@ object Util extends TwitterInstance {
   }
 
   def replies = Source.fromFile("src/main/resources/replies").getLines().toList
+
+  def searchTerms = Source.fromFile("src/main/resources/searchTerms").getLines().toArray
 
 }
