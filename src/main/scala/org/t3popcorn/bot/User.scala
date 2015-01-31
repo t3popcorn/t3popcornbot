@@ -4,12 +4,15 @@ import twitter4j._
 import twitter4j.conf.ConfigurationBuilder
 
 /**
- * Gets a Twitter instance set up and ready to use.
+ * Gets a Twitter instance
  */
 trait TwitterInstance extends AuthConfiguration {
   val twitter = new TwitterFactory(cb.build()).getInstance()
 }
 
+/**
+ * Central entrypoint for the authentication
+ */
 trait AuthConfiguration {
   val cb = new ConfigurationBuilder()
   cb.setDebugEnabled(true)

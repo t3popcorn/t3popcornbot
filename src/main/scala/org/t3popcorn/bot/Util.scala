@@ -7,6 +7,7 @@ import scala.io.Source
 import org.slf4j.LoggerFactory
 
 object Util extends TwitterInstance {
+
   def simpleStatusListener = new StatusListener() {
     def onStatus(status: Status) {
       if (!status.isRetweet) {
