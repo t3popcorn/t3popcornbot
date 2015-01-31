@@ -9,8 +9,9 @@ import org.slf4j.LoggerFactory
 object Util extends TwitterInstance {
 
   def simpleStatusListener = new StatusListener() {
+
     def onStatus(status: Status) {
-      if (!status.isRetweet) {
+      if (!status.isRetweet && !blackListedUsers.contains(status.getUser)) {
         val reply = Random.shuffle(Util.replies).head
 
         logger.info(status.getText)
@@ -19,11 +20,13 @@ object Util extends TwitterInstance {
         val text = "@" + statusAuthor + " " + reply
         val update = new StatusUpdate(text).inReplyToStatusId(status.getId)
         twitter.updateStatus(update)
+
+        if (status.getText.contains("t3popcorn")) {
+          twitter.createFavorite(status.getId)
+          twitter.retweetStatus(status.getId)
+        }
       }
-      if (status.getText.contains("t3popcorn")) {
-        twitter.createFavorite(status.getId)
-        twitter.retweetStatus(status.getId)
-      }
+
     }
 
     def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
@@ -41,6 +44,8 @@ object Util extends TwitterInstance {
   }
 
   def replies = Source.fromFile("src/main/resources/replies").getLines().toList
+
+  def blackListedUsers = Source.fromFile("src/main/resources/usersBlackList").getLines.toList
 
   def searchTerms = Source.fromFile("src/main/resources/searchTerms").getLines().toArray
 
