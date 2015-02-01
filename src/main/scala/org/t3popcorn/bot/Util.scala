@@ -11,7 +11,10 @@ object Util extends TwitterInstance {
   def simpleStatusListener = new StatusListener() {
 
     def onStatus(status: Status) {
-      if (!status.isRetweet && !blackListedUsers.contains(status.getUser.getScreenName) && Random.nextInt(10) == 4) {
+
+      val notReplyOn = !status.isRetweet && !blackListedUsers.contains(status.getUser.getScreenName)
+
+      if (notReplyOn && Random.nextInt(10) == 4) {
         val reply = Random.shuffle(Util.replies).head
 
         logger.info(status.getText)
@@ -22,7 +25,7 @@ object Util extends TwitterInstance {
         twitter.updateStatus(update)
 
       }
-      if (status.getText.contains("#t3popcorn") && !status.isRetweet && !blackListedUsers.contains(status.getUser.getScreenName)) {
+      if (status.getText.contains("#t3popcorn") && notReplyOn) {
          twitter.createFavorite(status.getId)
          twitter.retweetStatus(status.getId)
        }
