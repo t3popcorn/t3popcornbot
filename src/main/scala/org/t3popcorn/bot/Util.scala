@@ -34,7 +34,7 @@ object Util extends TwitterInstance {
     def onTrackLimitationNotice(numberOfLimitedStatuses: Int) {}
 
     def onException(ex: Exception) {
-      ex.printStackTrace()
+      logger.error(ex.getMessage)
     }
 
     def onScrubGeo(arg0: Long, arg1: Long) {}
