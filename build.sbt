@@ -11,6 +11,9 @@ scalaVersion := "2.11.5"
 libraryDependencies ++= Seq(
   "org.twitter4j" % "twitter4j-core" % "4.0.2",
   "org.twitter4j" % "twitter4j-stream" % "4.0.2",
+  // logging
   "org.slf4j" % "slf4j-api" % "1.7.10",
-  "org.slf4j" % "slf4j-simple" % "1.7.10"
+  "org.slf4j" % "slf4j-simple" % "1.7.10",
+  // configuration management
+  "net.ceedubs" %% "ficus" % "1.1.2",
 )

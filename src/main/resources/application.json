@@ -1,0 +1,23 @@
+{
+  "searchTerms": [
+    "TYPO3",
+    "#TYPO3",
+    "t3popcorn",
+    "typoscript",
+    "t3lib_div",
+    "tuesday"
+  ],
+  "userBlackList": [
+    "T3Popcorn",
+    "helhum",
+    "typo3",
+    "typo3_git",
+    "typo3neos",
+    "typo3flow",
+    "maddy2101",
+    "t3git_master",
+    "MarcusSchwemer",
+    "randomresult",
+    "TYPO3server"
+  ]
+}

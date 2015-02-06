@@ -9,6 +9,6 @@ object SearchStreamer extends AuthConfiguration {
     val twitterStream = new TwitterStreamFactory(cb.build()).getInstance()
 
     twitterStream.addListener(Util.simpleStatusListener)
-    twitterStream.filter(new FilterQuery().track(Util.searchTerms))
+    twitterStream.filter(new FilterQuery().track(Settings.searchTerms))
   }
 }

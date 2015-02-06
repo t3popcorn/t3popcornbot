@@ -48,10 +48,6 @@ object Util extends TwitterInstance {
 
   def replies = Source.fromFile("src/main/resources/replies").getLines().toList
 
-  def blackListedUsers = Source.fromFile("src/main/resources/userBlackList").getLines().toList
-
-  def searchTerms = Source.fromFile("src/main/resources/searchTerms").getLines().toArray
-
   def logger = LoggerFactory.getLogger("t3popcorn")
 
 }
