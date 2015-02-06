@@ -16,3 +16,6 @@ If you want to contribute to the community as a developer, you can help others
 If you want to contribute to the community as a developer, you can join the project
 Keep calm and flush caches
 Looks ugly
+To make this work, we would need to adjust GeneralUtility
+Did you try to remove the contents of the typo3temp directory?
+You need to clear the reflection cache manually to solve this kind of problem
