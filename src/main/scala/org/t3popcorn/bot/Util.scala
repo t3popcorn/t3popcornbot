@@ -12,7 +12,7 @@ object Util extends TwitterInstance {
 
     def onStatus(status: Status) {
 
-      val notReplyOn = !status.isRetweet && !blackListedUsers.contains(status.getUser.getScreenName)
+      val notReplyOn = !status.isRetweet && !Settings.blackListedUsers.contains(status.getUser.getScreenName)
 
       if (notReplyOn && Random.nextInt(10) == 4) {
         val reply = Random.shuffle(Util.replies).head
