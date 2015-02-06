@@ -5,7 +5,7 @@
     "t3popcorn",
     "typoscript",
     "t3lib_div",
-    "tuesday"
+    "t3board"
   ],
   "userBlackList": [
     "T3Popcorn",
