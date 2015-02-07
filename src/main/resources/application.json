@@ -1,11 +1,13 @@
 {
   "searchTerms": [
     "TYPO3",
-    "#TYPO3",
     "t3popcorn",
     "typoscript",
     "t3lib_div",
-    "t3board"
+    "t3board",
+    "extbase",
+    "fluid typo3",
+    "fluid extbase"
   ],
   "userBlackList": [
     "T3Popcorn",

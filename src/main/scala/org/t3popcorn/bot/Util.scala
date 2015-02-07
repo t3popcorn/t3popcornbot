@@ -16,7 +16,7 @@ object Util extends TwitterInstance {
         !Settings.blackListedUsers.contains(status.getUser.getScreenName) &&
         !Settings.environment.equals("dev")
 
-      if (replyOn && Random.nextInt(10) == 4) {
+      if (replyOn && Random.nextInt(8) == 4) {
         val reply = Random.shuffle(Settings.replies).head
 
         logger.info(status.getText)
