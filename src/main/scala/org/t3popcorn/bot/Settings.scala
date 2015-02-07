@@ -15,4 +15,6 @@ object Settings {
 
   def replies = config.as[List[String]]("replies")
 
+  def environment = sys.env("T3BOTENV")
+
 }
