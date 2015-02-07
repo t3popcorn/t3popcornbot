@@ -3,7 +3,6 @@ package org.t3popcorn.bot
 import twitter4j._
 
 import scala.util.Random
-import scala.io.Source
 import org.slf4j.LoggerFactory
 
 object Util extends TwitterInstance {
@@ -12,12 +11,12 @@ object Util extends TwitterInstance {
 
     def onStatus(status: Status) {
 
-      val notReplyOn =
-        !status.isRetweet ||
-        !Settings.blackListedUsers.contains(status.getUser.getScreenName) ||
+      val replyOn =
+        !status.isRetweet &&
+        !Settings.blackListedUsers.contains(status.getUser.getScreenName) &&
         !Settings.environment.equals("dev")
 
-      if (notReplyOn && Random.nextInt(10) == 4) {
+      if (replyOn && Random.nextInt(10) == 4) {
         val reply = Random.shuffle(Settings.replies).head
 
         logger.info(status.getText)
@@ -28,10 +27,11 @@ object Util extends TwitterInstance {
         twitter.updateStatus(update)
 
       }
-      if (status.getText.contains("#t3popcorn") && notReplyOn) {
-         twitter.createFavorite(status.getId)
-         twitter.retweetStatus(status.getId)
-       }
+      if (status.getText.contains("#t3popcorn") && replyOn) {
+        twitter.createFavorite(status.getId)
+        twitter.retweetStatus(status.getId)
+        twitter.createFriendship(status.getUser.getId)
+      }
 
     }
 
