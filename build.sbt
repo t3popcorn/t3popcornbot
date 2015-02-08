@@ -13,5 +13,6 @@ libraryDependencies ++= Seq(
   "org.twitter4j" % "twitter4j-stream" % "4.0.2",
   "org.slf4j" % "slf4j-api" % "1.7.10",
   "org.slf4j" % "slf4j-simple" % "1.7.10",
-  "net.ceedubs" %% "ficus" % "1.1.2"
+  "net.ceedubs" %% "ficus" % "1.1.2",
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )

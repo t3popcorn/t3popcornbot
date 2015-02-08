@@ -3,8 +3,6 @@ package org.t3popcorn.bot
 import com.typesafe.config.{ConfigFactory, Config}
 import net.ceedubs.ficus.Ficus._
 
-import scala.io.Source
-
 object Settings {
 
   val config: Config = ConfigFactory.load()
