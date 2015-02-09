@@ -7,7 +7,8 @@
     "t3board",
     "extbase",
     "fluid typo3",
-    "fluid extbase"
+    "fluid extbase",
+    "t3uxw"
   ],
   "userBlackList": [
     "T3Popcorn",
