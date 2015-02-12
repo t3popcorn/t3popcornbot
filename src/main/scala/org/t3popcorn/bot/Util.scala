@@ -8,12 +8,14 @@ import org.slf4j.LoggerFactory
 
 object Util extends TwitterInstance {
 
-  def simpleStatusListener = new StatusListener() {
+  def simpleStatusListener = new StatusListener {
 
     def onStatus(status: Status) {
 
-      val two = new Tagger
-      two.loadModel("src/main/resources/model.20120919")
+      val tagger = new Tagger
+      tagger.loadModel("src/main/resources/model.20120919")
+      val tokenized = tagger.tokenizeAndTag(status.getText)
+      logger.debug(Twokenize.tokenizeRawTweetText(status.getText).toArray.mkString(" - "))
 
       val replyOn =
         !status.isRetweet &&
