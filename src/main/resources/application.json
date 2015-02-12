@@ -8,7 +8,9 @@
     "extbase",
     "fluid typo3",
     "fluid extbase",
-    "t3uxw"
+    "t3uxw",
+    "t3see",
+    "t3cs"
   ],
   "userBlackList": [
     "T3Popcorn",
