@@ -1,5 +1,6 @@
 package org.t3popcorn.bot
 
+import cmu.arktweetnlp.{Tagger, Twokenize}
 import twitter4j._
 
 import scala.util.Random
@@ -10,6 +11,9 @@ object Util extends TwitterInstance {
   def simpleStatusListener = new StatusListener() {
 
     def onStatus(status: Status) {
+
+      val two = new Tagger
+      two.loadModel("src/main/resources/model.20120919")
 
       val replyOn =
         !status.isRetweet &&
