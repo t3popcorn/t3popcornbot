@@ -46,6 +46,11 @@
     "Looks ugly",
     "To make this work, we would need to adjust GeneralUtility",
     "Did you try to remove the contents of the typo3temp directory?",
-    "You need to clear the reflection cache manually to solve this kind of problem"
+    "You need to clear the reflection cache manually to solve this kind of problem",
+    "Create a file typo3conf/ENABLE_INSTALL_TOOL",
+    "Ensure that JavaScript and Cookies are enabled in your browser.",
+    "The FLUIDTEMPLATE object was introduced in TYPO3 4.5.",
+    "Finally TYPO3 has solid error handling since version 4.0.1.",
+    "One way for extensions to take over control of certain parts of TYPO3's core is using hooks."
   ]
 }
