@@ -1,6 +1,5 @@
 package org.t3popcorn.bot
 
-import cmu.arktweetnlp.{Tagger, Twokenize}
 import twitter4j._
 
 import scala.util.Random
@@ -11,11 +10,6 @@ object Util extends TwitterInstance {
   def simpleStatusListener = new StatusListener {
 
     def onStatus(status: Status) {
-
-      val tagger = new Tagger
-      tagger.loadModel("src/main/resources/model.20120919")
-      val tokenized = tagger.tokenizeAndTag(status.getText)
-      logger.debug(Twokenize.tokenizeRawTweetText(status.getText).toArray.mkString(" - "))
 
       val replyOn =
         !status.isRetweet &&
