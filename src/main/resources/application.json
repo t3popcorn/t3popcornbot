@@ -51,6 +51,12 @@
     "Ensure that JavaScript and Cookies are enabled in your browser.",
     "The FLUIDTEMPLATE object was introduced in TYPO3 4.5.",
     "Finally TYPO3 has solid error handling since version 4.0.1.",
-    "One way for extensions to take over control of certain parts of TYPO3's core is using hooks."
+    "One way for extensions to take over control of certain parts of TYPO3's core is using hooks.",
+    "Single quotes (') must be escaped with a single backslash, if surrounded by a higher level single quote of the outer ViewHelper",
+    "After updating from TYPO3 < 4.0 to 4.0 or later versions, the plugin might stop working.",
+    "Most advanced FTP programs have an 'edit' button. Please refer to your FTP program's documentation.",
+    "$this->_dataStore = new tx_lib_spl_ArrayObject();",
+    "You can tell me that TYPO3 4.4.9 and tt_news 2.5.0 is too old.",
+    "“OOPS, AN ERROR OCCURRED!” IS NOT A VALID ERROR MESSAGE"
   ]
 }
