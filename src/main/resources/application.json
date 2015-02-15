@@ -57,6 +57,9 @@
     "Most advanced FTP programs have an 'edit' button. Please refer to your FTP program's documentation.",
     "$this->_dataStore = new tx_lib_spl_ArrayObject();",
     "You can tell me that TYPO3 4.4.9 and tt_news 2.5.0 is too old.",
-    "“OOPS, AN ERROR OCCURRED!” IS NOT A VALID ERROR MESSAGE"
+    "“OOPS, AN ERROR OCCURRED!” IS NOT A VALID ERROR MESSAGE",
+    "in the old times, you could XCLASS your way to world domination.",
+    "in the old times, you could XCLASS your way to world domination.",
+    "How the heck ist General Caches?"
   ]
 }
