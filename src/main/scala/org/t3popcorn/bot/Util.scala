@@ -27,7 +27,7 @@ object Util extends TwitterInstance {
         twitter.updateStatus(update)
 
       }
-      if (status.getText.contains("#t3popcorn") && replyOn) {
+      if (status.getText.toLowerCase.contains("#t3popcorn") && replyOn) {
         twitter.createFavorite(status.getId)
         twitter.retweetStatus(status.getId)
         twitter.createFriendship(status.getUser.getId)
