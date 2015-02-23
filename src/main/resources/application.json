@@ -74,6 +74,12 @@
     "1. Prepare your work, 2. Edit content, Oops: an error occured",
     "Interesting project but If you want to code in java, just code in java",
     "TYPO3 requires a web server with a PHP installation and a database.",
-    "I will not post here because I replied to this article in the TYPO3 mailing list."
+    "I will not post here because I replied to this article in the TYPO3 mailing list.",
+    "Recent research made clear that TYPO3 is most feared Open Source CMS bij competitors in the Netherlands.",
+    "To truly see the pulse of TYPO3 of which there’s easily a 100 tweets and several blogs written a day",
+    "Please avoid flamewars, trolling, personal attacks, and repetitive arguments.",
+    "maybe you should delete the l10n folder in typo3temp",
+    "Bonjour à tous.",
+    "Cannot find tslib/. Please set path by defining $configured_tslib_path in JavaProxy.php."
   ]
 }
