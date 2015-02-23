@@ -80,6 +80,10 @@
     "Please avoid flamewars, trolling, personal attacks, and repetitive arguments.",
     "maybe you should delete the l10n folder in typo3temp",
     "Bonjour à tous.",
-    "Cannot find tslib/. Please set path by defining $configured_tslib_path in JavaProxy.php."
+    "Cannot find tslib/. Please set path by defining $configured_tslib_path in JavaProxy.php.",
+    "popcorn time #typo3",
+    "I don't support this hectic way to do it, after nobody cared for it for years",
+    "PNG is not a good Vektor format",
+    "go read the source code of fluidpages, the information you seek is in there"
   ]
 }
