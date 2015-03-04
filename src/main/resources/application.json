@@ -107,6 +107,7 @@
     "tslib_pibase based extensions are no longer supported in 6.2",
     "I need better hardware since 6.2 is 10 times slower than 4.5",
     "In December 2013 TYPO3 v5 (formerly also known as 'Phoenix') was launched as TYPO3 Neos",
-    "RHEL offers 11+ yrs support for LTS versions. We can do more!"
+    "RHEL offers 11+ yrs support for LTS versions. We can do more!",
+    "4.5 Feature: Integer Overflow Through Patch Level Number"
   ]
 }
