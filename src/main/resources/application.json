@@ -113,6 +113,7 @@
     "the TYPO3 Association is a body outside the community",
     "7 LTS will introduce In-EXT-purchases",
     "Your passion will lead you to your purpose. Follow it! See ya.",
-    "A new extraordinary change in regard of performance was included in 6.2.10. And broke class loading."
+    "A new extraordinary change in regard of performance was included in 6.2.10. And broke class loading.",
+    "can we *please* stop puttin' extension after extension in the sysext folder and start using TER? Thank you!"
     ]
 }
