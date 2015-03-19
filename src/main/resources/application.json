@@ -119,6 +119,8 @@
     "As usual you are mixing up 3 different things here",
     "As in TYPO3 6.2. TYPE = HTML is no more existing you need to replace this part simply in all existing framework templates with TYPE = TEXT",
     "Well, you thought so but TYPO3 core does not really allow this.",
-    "Check FE localisation guide and see that Extbase does it incorrectly."
+    "Check FE localisation guide and see that Extbase does it incorrectly.",
+    "I believe it does not work because this code is completely incorrect.",
+    "Developers should become familiar with the Frontend Localisation Guide before touching this area."
   ]
 }
