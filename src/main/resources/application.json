@@ -121,6 +121,22 @@
     "Well, you thought so but TYPO3 core does not really allow this.",
     "Check FE localisation guide and see that Extbase does it incorrectly.",
     "I believe it does not work because this code is completely incorrect.",
-    "Developers should become familiar with the Frontend Localisation Guide before touching this area."
+    "Developers should become familiar with the Frontend Localisation Guide before touching this area.",
+    "Extbase is a backported subset of Flow - not the other way around, so it has (partly) been funded by the Flow budget in the past.",
+    "The BLE project funded large parts of FAL development",
+    "CMS also includes a number of features that were incubated in the Flow and Neos projects",
+    "that would actually kill two birds with one stone",
+    "what is the signal you want to send with this decision?",
+    "not money, but the team makes this happen",
+    "for the record, it is *one* team for Neos and Flow ;-)",
+    "IMHO neos didn't grow out of needs from within neither was it a rewrite but emerged from unpractical, complex and unproved/academical thinking.",
+    "TypoScript 2 is on the way to be a very powerful successor to the TypoScript",
+    "We strive for a very high goal with Neos: to have the best frontend editing experience",
+    "the T3A put a lot of money (over 700'000.00 CHF, which comes mostly from members like we are) in the projects FLOW and NEOS",
+    "We consider the applied costs for release management as too high.",
+    "As it turns out, it's now up to the community only to promote TYPO3, Flow and Neos at conferences.",
+    "here we are 6 years after that, still no stable, feature rich CMS",
+    "5 Years after the Start we got at least a stable Framework, but that will have bracking changes, after one year",
+    "In early 2012 we got the communication that Extbase will no longer be the bridge from the CMS 6.x branch to Neos"
   ]
 }
