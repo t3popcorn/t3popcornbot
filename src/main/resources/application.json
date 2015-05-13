@@ -134,6 +134,8 @@
     "TypoScript 2 is on the way to be a very powerful successor to the TypoScript",
     "In early 2012 we got the communication that Extbase will no longer be the bridge from the CMS 6.x branch to Neos",
     "Go with the flow!",
-    "For support, please, ask in TYPO3 mailing lists. This place is only for real bugs."
+    "For support, please, ask in TYPO3 mailing lists. This place is only for real bugs.",
+    "Maybe you should attend the TYPO3camp in Berlin. There are many free places.",
+    "Just refactor TCEmain and then we'll speak again."
   ]
 }
