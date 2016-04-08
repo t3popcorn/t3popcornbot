@@ -38,12 +38,10 @@
   ],
   "replies": [
     "Have fun with TYPO3",
-    "Already migrated to TYPO3 7.1?",
     "Sharing is caring",
     "Inspiring people to share",
     "Contributed to TYPO3 today?",
     "Remember to share TYPO3 gossip with the hashtag #t3popcorn",
-    "Embrace, Innovate, Deliver",
     "Tweet a photo of your #LTSFACE",
     "Be considerate, be respectful, be collaborative",
     "When you disagree, consult others, When you are unsure, ask for help",
@@ -144,6 +142,9 @@
     "With TYPO3 7.x Flow loses one of it’s biggest users - Flow usage drops to 0.001% in germany",
     "You call getMilk and a cow is delivered",
     "Read the FAQ before posting, please.",
-    "Language!"
+    "Language!",
+    "please refrain from straw man arguments, it's very annoying.",
+    "This is pretty ridiculous. Let's have a nice weekend instead.",
+    "No, empty "conflicts" is not a problem of the extension because it was for years like that and always worked perfectly."
   ]
 }
