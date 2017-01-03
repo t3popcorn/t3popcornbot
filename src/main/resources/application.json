@@ -20,7 +20,8 @@
     "t3cb",
     "t3cmallorca",
     "t3runners",
-    "t3bits"
+    "t3bits",
+    "t3inc"
   ],
   "userBlackList": [
     "T3Popcorn",

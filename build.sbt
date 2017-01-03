@@ -16,5 +16,3 @@ libraryDependencies ++= Seq(
   "net.ceedubs" %% "ficus" % "1.1.2",
   "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )
-
-scalacOptions += "-feature"
