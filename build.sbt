@@ -14,6 +14,5 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.10",
   "org.slf4j" % "slf4j-simple" % "1.7.10",
   "net.ceedubs" %% "ficus" % "1.1.2",
-  "org.scalatest" %% "scalatest" % "2.2.4" % "test",
-  "edu.cmu.cs" % "ark-tweet-nlp" % "0.3.2"
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )

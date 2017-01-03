@@ -7,7 +7,7 @@ import twitter4j.conf.ConfigurationBuilder
  * Gets a Twitter instance
  */
 trait TwitterInstance extends AuthConfiguration {
-  val twitter = new TwitterFactory(cb.build()).getInstance()
+  val twitter: Twitter = new TwitterFactory(cb.build()).getInstance()
 }
 
 /**

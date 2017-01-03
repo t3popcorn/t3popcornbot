@@ -49,6 +49,6 @@ object Util extends TwitterInstance {
 
   }
 
-  def logger = LoggerFactory.getLogger("t3popcorn")
+  def logger: org.slf4j.Logger = LoggerFactory.getLogger("t3popcorn")
 
 }

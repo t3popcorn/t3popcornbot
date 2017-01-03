@@ -7,12 +7,12 @@ object Settings {
 
   val config: Config = ConfigFactory.load()
 
-  def searchTerms = config.as[Array[String]]("searchTerms")
+  def searchTerms: Array[String] = config.as[Array[String]]("searchTerms")
 
-  def blackListedUsers = config.as[List[String]]("userBlackList")
+  def blackListedUsers: List[String] = config.as[List[String]]("userBlackList")
 
-  def replies = config.as[List[String]]("replies")
+  def replies: List[String] = config.as[List[String]]("replies")
 
-  def environment = sys.env("T3BOTENV")
+  def environment: String = sys.env("T3BOTENV")
 
 }
