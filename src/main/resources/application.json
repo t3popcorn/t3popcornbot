@@ -161,6 +161,9 @@
     "No, empty “conflicts“ is not a problem of the extension because it was for years like that and always worked perfectly.",
     "Misconfiguration, no need for the change.",
     "+100",
-    "Yes. Idiot."
+    "Yes. Idiot.",
+    "The fix is not exactly right. If the array does not exist, it should not be used, that's all.",
+    "In TYPO3 \"use as root page\" means the same as the domain record.",
+    "What do you want me to do with it?"
   ]
 }
